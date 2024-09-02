@@ -43,7 +43,7 @@ const ProductListing = () => {
       <div className="mt-10 mb-10 flex justify-center w-full flex-col items-center gap-3">
         <p>Select Category</p>
         <select
-          className="w-[140px]"
+          className="w-[140px] p-2"
           onChange={(e) => {
             if (e.target.value != "all") modifiedProductListing(e.target.value);
             else setProducts(allProducts);
