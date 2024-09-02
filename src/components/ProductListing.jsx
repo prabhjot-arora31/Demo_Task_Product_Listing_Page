@@ -10,7 +10,7 @@ const ProductListing = () => {
       setProducts(
         allProducts.filter((product) => {
           return (
-            product.name.toLowerCase() === searchedTerm.toLowerCase().trim()
+            product.name.toLowerCase().includes(searchedTerm.toLowerCase().trim())
           );
         })
       );
