@@ -8,6 +8,12 @@ const ProductCard = ({ product }) => {
         src={product.image}
         className="w-[170px] h-[180px] max-h[160px] relative h-full w-full bg-center bg-cover"
       />
+      <div className="flex justify-between w-full mb-5">
+        <p className="font-semibold m-0"> ${product.price}</p>
+        <p className="bg-yellow-100 py-1 px-3 rounded text-[14px]">
+          {product.category}
+        </p>
+      </div>
     </div>
   );
 };

@@ -37,7 +37,7 @@ export const Products = [
     price: 299.99,
     category: "Clothing",
     image:
-      "https://www.bayperfect.com/wp-content/uploads/2020/07/Men%E2%80%99s-Leather-Classic-Trucker-Jacket.jpg", // Replace with actual
+      "https://thegenuineleather.com/wp-content/uploads/2019/08/Black-leather-jacket-for-men-1.jpg", // Replace with actual
 
     description: `Actual Material: Genuine Leather\n
 Inner: Viscose Lining\n
