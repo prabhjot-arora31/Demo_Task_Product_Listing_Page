@@ -26,6 +26,7 @@ const ProductListing = () => {
       <h2 className="mb-5 text-[20px] font-bold">Welcome to eShop</h2>
       <div className="flex justify-center mb-10 text-[16.4px] flex-wrap gap-2">
         <input
+          placeholder="Search...."
           className="rounded border-2 px-1 outline-black border-gray-400"
           onChange={(e) => {
             setSearchedTerm(e.target.value);
