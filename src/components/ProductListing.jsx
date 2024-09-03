@@ -6,7 +6,7 @@ const ProductListing = () => {
   const [allProducts, setAllProducts] = useState(Products);
   const [searchedTerm, setSearchedTerm] = useState("");
   const modifiedProductListing = (data) => {
-    if (data == searchedTerm.toLowerCase())
+    if (data == searchedTerm.toLowerCase() && data.length > 0)
       setProducts(
         allProducts.filter((product) => {
           return (
@@ -29,7 +29,7 @@ const ProductListing = () => {
           className="rounded border-2 px-1 outline-black border-gray-400"
           onChange={(e) => {
             setSearchedTerm(e.target.value);
-         //   modifiedProductListing(e.target.value);
+           modifiedProductListing(e.target.value.toLowerCase().trim());
           }}
         />
         <button
