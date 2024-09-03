@@ -39,7 +39,7 @@ const ProductListing = () => {
           }}
         />
       </div>
-      <div className="mt-10 mb-10 flex justify-center w-full flex-col items-center gap-3">
+      <div className="mt-10 flex justify-center w-full flex-col items-center gap-2">
         <p>Select Category</p>
         <select
           className="w-[140px] p-2"
@@ -54,6 +54,26 @@ const ProductListing = () => {
           <option value="wearables">Wearables</option>
           <option value="clothing">Clothing</option>
           <option value="accessories">Accessories</option>
+        </select>
+      </div>
+      <div className="mt-5 flex justify-center w-full flex-col items-center gap-2 mb-10">
+        <p>or Sort by</p>
+        <select
+          className="p-2"
+          onClick={(e) => {
+            setProducts(
+              allProducts
+                .slice()
+                .sort((a, b) =>
+                  e.target.value == "lowest"
+                    ? a.price - b.price
+                    : b.price - a.price
+                )
+            );
+          }}
+        >
+          <option value={"lowest"}>Lowest to Highest</option>
+          <option value="highest">Highest to Lowest</option>
         </select>
       </div>
       <div className="grid grid-cols-1 lg:gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 place-items-center ">
