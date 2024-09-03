@@ -9,9 +9,9 @@ const ProductListing = () => {
     if (data == searchedTerm.toLowerCase() && data.length > 0)
       setProducts(
         allProducts.filter((product) => {
-          return (
-            product.name.toLowerCase().includes(searchedTerm.toLowerCase().trim())
-          );
+          return product.name
+            .toLowerCase()
+            .includes(searchedTerm.toLowerCase().trim());
         })
       );
     else
@@ -29,18 +29,14 @@ const ProductListing = () => {
           className="rounded border-2 px-1 outline-black border-gray-400"
           onChange={(e) => {
             setSearchedTerm(e.target.value);
-          // modifiedProductListing(e.target.value.toLowerCase().trim());
-            
+            setProducts(
+              allProducts.filter((product) =>
+                product.name.toLowerCase().includes(e.target.value)
+              )
+            );
+            // modifiedProductListing(e.target.value.toLowerCase().trim());
           }}
         />
-        <button
-          className="rounded bg-blue-500 py-2 text-white font-semibold px-5 text-[16.4px]"
-          onClick={() => {
-            modifiedProductListing(searchedTerm.toLowerCase());
-          }}
-        >
-          Search
-        </button>
       </div>
       <div className="mt-10 mb-10 flex justify-center w-full flex-col items-center gap-3">
         <p>Select Category</p>
