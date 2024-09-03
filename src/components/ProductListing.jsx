@@ -29,7 +29,8 @@ const ProductListing = () => {
           className="rounded border-2 px-1 outline-black border-gray-400"
           onChange={(e) => {
             setSearchedTerm(e.target.value);
-           modifiedProductListing(e.target.value.toLowerCase().trim());
+          // modifiedProductListing(e.target.value.toLowerCase().trim());
+            
           }}
         />
         <button
